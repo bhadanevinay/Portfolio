@@ -84,14 +84,10 @@ export function SnowBackground() {
         ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
 
         if (isLight) {
-          ctx.fillStyle = `rgba(100, 116, 139, ${flake.alpha * 0.55})`;
-          if (flake.radius > 2.0) {
-            ctx.shadowBlur = 3;
-            ctx.shadowColor = 'rgba(148, 163, 184, 0.4)';
-          }
+          ctx.fillStyle = `rgba(100, 120, 160, ${flake.alpha * 0.55})`;
         } else {
           ctx.fillStyle = `rgba(255, 255, 255, ${flake.alpha})`;
-          if (flake.radius > 2.0) {
+          if (flake.radius > 2.2) {
             ctx.shadowBlur = 5;
             ctx.shadowColor = 'rgba(255, 255, 255, 0.7)';
           }
@@ -118,8 +114,8 @@ export function SnowBackground() {
       <canvas ref={canvasRef} className="w-full h-full block" />
 
       {/* Atmospheric lighting orbs */}
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[550px] bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 -right-40 w-[450px] h-[450px] bg-cyan/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[550px] bg-accent/6 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 -right-40 w-[450px] h-[450px] bg-cyan/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Grid overlay */}
       <div className="absolute inset-0 grid-ambient opacity-20 pointer-events-none" />
