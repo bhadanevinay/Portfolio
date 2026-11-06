@@ -1,118 +1,95 @@
-# Vinay S. Bhadane — Developer Portfolio
+# VINAY BHADANE — PORTFOLIO
 
-A modern, highly interactive developer portfolio featuring a custom 2D cursor-tracking illustrated developer character, continuous snowfall background, dark/light theme switching, and authentic resume data for **Vinay S. Bhadane**.
+A cinematic portfolio for **Vinay S. Bhadane**: Full-Stack Web Developer and Computer Engineering student.
+Every section is an episode, every project is an Original, and the whole site plays like a series.
 
-Built with **Next.js 15 App Router**, **React 19**, **TypeScript**, **Tailwind CSS**, and **Motion for React**.
+> A personal portfolio with a fictional streaming-platform look. It is not affiliated with Netflix or any other streaming service and uses none of their logos.
 
----
+## Run it locally
 
-## 🚀 Key Features
-
-- **Interactive 2D Character Hero**: Custom line-art developer character that follows the visitor's mouse/touch movement with 2.5D head rotation, eye tracking, eyelid blinking, and torso physics.
-- **Dynamic Theme-Reactive Outfit**: Seamless switching between Dark Mode (crisp white shirt with dark stripes on `#08090C` background) and Light Mode (deep slate-navy shirt with white stripes on `#FFFFFF` background).
-- **Continuous Global Falling Snow**: Persistent non-blocking HTML5 canvas snow particles floating continuously across all sections with theme-adaptive flake shading.
-- **Continuous Skills Showcase**: Dual continuous infinite marquee rails with verified SVG logos, category filter dock, and interactive bento cards.
-- **Mobile Responsive**: Custom mobile stacked layout matching clean editorial design standards.
-- **Zero 3D Bloat**: Ultra-fast load times with native scrolling and lightweight CSS & Motion animations.
-
----
-
-## 🛠️ Technology Stack
-
-- **Framework**: Next.js 15 (App Router)
-- **Library**: React 19
-- **Language**: TypeScript 5
-- **Styling**: Tailwind CSS
-- **Interactions**: Motion for React (`motion/react`)
-- **Icons**: Lucide React & Authentic SVG Brand Icons
-- **Fonts**: Space Grotesk, DM Sans, JetBrains Mono
-
----
-
-## 📋 Sections & Content
-
-1. **Section 01 — Hero**: 2D Illustrated developer character, cursor-tracking eyes & head rotation, action pill buttons, greeting, and core focus narrative.
-2. **Section 02 — About Me**: Editorial philosophy, live stat chips (`1st / 96 Teams`, `8.76 CGPA`, `Full Stack Web Dev`), and 4 core engineering pillars.
-3. **Section 03 — Technical Skills**: Dual continuous infinite marquee rails, category filter dock (`Languages`, `Frontend`, `Backend & DB`, `Cloud & Tools`, `CS Concepts`), and verified technology cards.
-4. **Section 04 — Professional Experience**: Career conduit timeline with pulsating radar node and environment tags.
-5. **Section 05 — Featured Projects**: Deep dives into **Abhyasmitra** (1,000+ users), **VoteChainX** (State Hackathon 1st Place), and **Kumbhprasad** (Razorpay integration).
-6. **Section 06 — Education**: Academic credentials from MET's Institute of Engineering.
-7. **Section 07 — Recognition**: Milestone cards celebrating state hackathon victory, problem-solving rank, and certifications.
-8. **Section 08 — Contact**: Direct dispatch terminal with one-click copy buttons for email and phone, plus LinkedIn and GitHub connection pills.
-
----
-
-## 💻 Local Development
+Requires **Node.js 18+**.
 
 ```bash
-# Install dependencies
 npm install
-
-# Start local development server
 npm run dev
-
-# Create production build
-npm run build
-
-# Start production server
-npm run start
 ```
 
-```
-d:\Portfolio Webste/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx            # Global fonts, metadata & SEO
-│   │   ├── page.tsx              # Clean assembly of all 8 sections
-│   │   ├── globals.css           # Minimal dark theme & glass styling
-│   │   ├── robots.ts             # Robots configuration
-│   │   └── sitemap.ts            # Dynamic sitemap
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Navbar.tsx        # Fixed navigation with active anchors
-│   │   │   ├── Footer.tsx        # Minimal footer & back-to-top button
-│   │   │   └── SocialIcons.tsx   # Verified vector social icons
-│   │   ├── sections/
-│   │   │   ├── Hero.tsx          # Section 01
-│   │   │   ├── About.tsx         # Section 02
-│   │   │   ├── Skills.tsx        # Section 03
-│   │   │   ├── Experience.tsx    # Section 04
-│   │   │   ├── Projects.tsx      # Section 05
-│   │   │   ├── Education.tsx     # Section 06
-│   │   │   ├── Achievements.tsx  # Section 07
-│   │   │   └── Contact.tsx       # Section 08
-│   │   └── ui/
-│   │       ├── Button.tsx        # Reusable button with variants & sizes
-│   │       ├── SectionHeading.tsx# Reusable editorial section heading
-│   │       ├── SkillLogo.tsx     # Authentic SVGs for all resume technologies
-│   │       └── ProjectCard.tsx   # Asymmetric editorial project card
-│   ├── data/
-│   │   ├── personal.ts           # Centralized personal info (Single source of truth)
-│   │   ├── skills.ts             # Skills categories & technologies
-│   │   ├── projects.ts           # Featured projects data
-│   │   ├── experience.ts         # Internship & work history
-│   │   ├── education.ts          # Academic degrees & scores
-│   │   └── achievements.ts       # Hackathon & exam milestones
-│   ├── lib/
-│   │   └── utils.ts              # Tailwind clsx utility
-│   └── types/
-│       └── portfolio.ts          # Strictly typed TypeScript interfaces
-├── public/
-│   └── resume/
-│       └── Vinay_Bhadane_Resume.pdf # Actual resume PDF
-└── README.md
-```
+Open the URL Vite prints (usually http://localhost:5173).
 
----
-
-## Running Locally
+Production build:
 
 ```bash
-# Development
-npm run dev
-
-# Production Build
 npm run build
-npm run start
+npm run preview
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+
+The static site is written to `dist/` and can be deployed as-is to Vercel, Netlify, GitHub Pages or any static host.
+
+## Updating the content
+
+**All content lives in one file: [`src/data/portfolio.ts`](src/data/portfolio.ts).** It was generated from the resume, and every component reads from it.
+
+| To change… | Edit |
+| --- | --- |
+| Name, intro, email, LinkedIn, GitHub | `profile` |
+| A project, or a new one | `projects` (add an object; it appears in Originals, the overlay, the resume sheet and the counts) |
+| Achievements / certifications | `achievements`, `certifications` |
+| Skills and their "where it's used" notes | `skillCategories`, `skillEvidence` |
+| Seasons and episodes (My Journey) | `seasons` |
+| Top 10 row | `topPicks` |
+| ▶ Play Intro highlight reel | `introSlides` |
+| Profile order (Recruiter / Developer / Creative) | `viewerProfiles` |
+| Opening studio card text | `profile.originalLabel` |
+
+**Resume:** `public/assets/Vinay_Bhadane_Resume.pdf`.
+
+**Photo:** `vinay.png`, then run:
+
+```bash
+npm run images
+```
+
+This rebuilds the responsive WebP portraits and the social share image in `public/assets/`.
+
+## What's inside
+
+```
+src/
+  data/portfolio.ts        ← single source of truth (from the resume)
+  App.tsx                  ← stages: opening → profile select → home; overlays
+  components/
+    OpeningSequence        ← black → studio card → VINAY → THE SERIES → portrait → ▶ PLAY
+    ProfileSelector        ← "Who's watching?" (changes section order only)
+    Navbar                 ← hide-on-scroll nav, profile switcher, mobile menu
+    Hero                   ← billboard: parallax portrait, particles, light streaks, floating chips
+    PlayIntro              ← ▶ Play Intro: zoom into portrait → highlight reel (pause, ← →, tap zones)
+    ContinueWatching       ← cards with real "watched" progress bars
+    About                  ← The Pilot
+    Seasons / EpisodeCard  ← My Journey as seasons and episodes
+    Originals / ProjectCard← pinned horizontal sequence on desktop, swipe rail on touch
+    ProjectModal           ← full-screen project overlay with a shared-element transition
+    TopPicks               ← Top 10-style row
+    Skills                 ← skill genres; each card shows where the skill appears
+    Achievements           ← award-poster cards + certification rail (links to credentials)
+    ResumeViewer/ResumeModal ← designed resume sheet, PDF viewer, download
+    FinalCTA               ← TO BE CONTINUED… + contact links
+    CustomCursor, fx.tsx   ← cursor states, magnetic buttons, 3D tilt, text reveals, particles
+  hooks/                   ← Lenis smooth scroll + scroll lock, media queries, watch progress
+scripts/build-images.mjs   ← portrait/share-image pipeline (sharp)
+```
+
+**Stack:** React 18, TypeScript, Vite 6, Tailwind CSS 4, Framer Motion 11, Lenis.
+
+## Accessibility and performance
+
+- `prefers-reduced-motion` is respected: smooth scroll, the custom cursor, tilt, particles, grain and the pinned horizontal scroll turn off, and the opening jumps straight to its final frame.
+- Hover effects only run on devices with a precise pointer. Touch devices get tap interactions and native swipe rails.
+- The custom cursor appears only with a mouse or trackpad.
+- Overlays close with Esc, and the highlight reel supports Space and the ← → keys.
+- Portraits are responsive WebP files (25–90 KB). Overlays are code-split, and particles pause when they're off screen.
+
+## Keyboard shortcuts
+
+- **Opening:** Enter or Esc skips it.
+- **Play Intro:** Space pauses, ← and → change slides, Esc closes.
+- **Project and resume overlays:** Esc closes.
