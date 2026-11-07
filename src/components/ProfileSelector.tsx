@@ -8,7 +8,7 @@ export function ProfileAvatar({ id, size = 'lg' }: { id: ProfileId; size?: 'sm' 
   const box = size === 'lg' ? 'h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 rounded-xl' : 'h-8 w-8 rounded-md';
   if (id === 'vinay') {
     return (
-      <span className={`relative block overflow-hidden ${box}`} style={{ background: 'radial-gradient(circle at 50% 30%, #7a0f24, #1a0509)' }}>
+      <span className={`relative block overflow-hidden ${box}`} style={{ background: 'radial-gradient(circle at 50% 30%, #5a4505, #141002)' }}>
         <img src="/assets/portrait-420.webp" alt="" className="absolute inset-x-0 bottom-0 mx-auto h-[115%] w-auto max-w-none -translate-x-[3%] object-cover object-top" />
       </span>
     );
@@ -42,8 +42,8 @@ const DESTINATIONS: Destination[] = [
     title: 'About Vinay',
     subtitle: 'Background & Education',
     badge: 'BIO',
-    badgeBg: 'bg-crimson',
-    bgGradient: 'radial-gradient(circle at 50% 30%, #7a0f24, #110307)',
+    badgeBg: 'bg-[#F5C518] !text-black font-extrabold',
+    bgGradient: 'radial-gradient(circle at 50% 30%, #5a4505, #141002)',
     icon: (
       <img
         src="/assets/portrait-420.webp"
@@ -123,7 +123,7 @@ export default function ProfileSelector({ onPick }: { onPick: (sectionId?: strin
       role="dialog"
       aria-label="Where would you like to start?"
     >
-      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(229,19,43,0.16),transparent_70%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(245,197,24,0.16),transparent_70%)]" />
 
       <motion.div
         className="relative mb-10 text-center"
@@ -163,7 +163,7 @@ export default function ProfileSelector({ onPick }: { onPick: (sectionId?: strin
               className="group flex w-full flex-col items-center gap-3.5 text-center focus:outline-none"
             >
               <span
-                className="relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-2xl ring-2 ring-white/10 transition-all duration-300 group-hover:scale-105 group-hover:ring-bone group-focus-visible:ring-bone group-hover:shadow-[0_0_35px_rgba(229,19,43,0.35)] sm:h-36 sm:w-36 md:h-40 md:w-40"
+                className="relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-2xl ring-2 ring-white/10 transition-all duration-300 group-hover:scale-105 group-hover:ring-bone group-focus-visible:ring-bone group-hover:shadow-[0_0_35px_rgba(245,197,24,0.35)] sm:h-36 sm:w-36 md:h-40 md:w-40"
                 style={{ background: d.bgGradient }}
               >
                 {d.icon}
@@ -192,7 +192,7 @@ export default function ProfileSelector({ onPick }: { onPick: (sectionId?: strin
           type="button"
           onClick={() => onPick()}
           data-cursor="play"
-          className="group inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-6 py-2.5 text-xs font-semibold tracking-[0.16em] text-bone transition hover:border-crimson-2 hover:bg-white/10 hover:text-white"
+          className="group inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-6 py-2.5 text-xs font-semibold tracking-[0.16em] text-bone transition hover:border-[#F5C518] hover:bg-white/10 hover:text-white"
         >
           <span className="text-crimson-2 transition-transform group-hover:scale-125">▶</span> START FROM THE BEGINNING
         </button>

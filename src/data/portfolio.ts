@@ -5,7 +5,7 @@
 
 export type Palette = { from: string; via: string; to: string; accent: string };
 
-const crimson: Palette = { from: '#24060b', via: '#6e0d1d', to: '#09070a', accent: '#ff3d5a' };
+const crimson: Palette = { from: '#241a02', via: '#6e5405', to: '#0a0802', accent: '#F5C518' };
 const amber: Palette = { from: '#1c1003', via: '#6b3c06', to: '#0a0806', accent: '#ffb547' };
 const ocean: Palette = { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' };
 const violet: Palette = { from: '#120822', via: '#3d1a6e', to: '#07060c', accent: '#b98bff' };
@@ -507,7 +507,7 @@ export const viewerProfiles: {
     id: 'vinay',
     name: 'Vinay',
     blurb: 'The full series, in order',
-    color: '#e5132b',
+    color: '#F5C518',
     order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
   },
   {

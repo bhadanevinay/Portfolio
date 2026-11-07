@@ -85,7 +85,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
           transition={{ duration: 1.6, ease: EASE, delay: 0.1 }}
         >
           {/* rim light ring */}
-          <div aria-hidden className="absolute bottom-[8%] left-1/2 h-[78%] w-[78%] -translate-x-1/2 rounded-full border border-crimson-2/20 shadow-[0_0_120px_rgba(229,19,43,0.35),inset_0_0_80px_rgba(229,19,43,0.18)]" />
+          <div aria-hidden className="absolute bottom-[8%] left-1/2 h-[78%] w-[78%] -translate-x-1/2 rounded-full border border-[#F5C518]/25 shadow-[0_0_120px_rgba(245,197,24,0.35),inset_0_0_80px_rgba(245,197,24,0.18)]" />
           <img
             src={profile.portrait.src}
             srcSet={profile.portrait.srcSet}
@@ -94,8 +94,8 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
 
             className="absolute bottom-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] [mask-image:linear-gradient(to_bottom,black_62%,transparent_97%)]"
           />
-          {/* crimson rim light on the image edge */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_30%,rgba(255,61,90,0.16),transparent_70%)] mix-blend-screen" />
+          {/* rim light on the image edge */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_30%,rgba(245,197,24,0.18),transparent_70%)] mix-blend-screen" />
 
           {/* floating UI chips */}
           {floating.map((f, i) => (

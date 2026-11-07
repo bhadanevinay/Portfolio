@@ -80,7 +80,7 @@ export default function Navbar({ order, profileId, onSwitch }: { order: SectionI
           <button
             type="button"
             onClick={() => go('contact')}
-            className="hidden rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold tracking-[0.14em] text-bone transition hover:border-crimson-2 hover:text-crimson-2 sm:block"
+            className="hidden rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold tracking-[0.14em] text-bone transition hover:border-[#F5C518] hover:text-[#F5C518] sm:block"
           >
             LET&apos;S BUILD
           </button>

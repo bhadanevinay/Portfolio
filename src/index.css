@@ -4,7 +4,7 @@
   --color-ink: #07070a;
   --color-ink-2: #0e0e13;
   --color-ink-3: #16161d;
-  --color-crimson: #e5132b;
+  --color-crimson: #F5C518;
   --color-crimson-2: #ff3d5a;
   --color-bone: #f4f1ec;
   --color-mist: #a7a6ad;
@@ -50,7 +50,7 @@ body {
 
 ::selection {
   background: var(--color-crimson);
-  color: white;
+  color: #07070a;
 }
 
 .gutter {
